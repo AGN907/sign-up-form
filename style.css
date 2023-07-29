@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "norse";
+    src: url("fonts/Norse-Bold.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.signup-section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
+}
+
+
+.hero > p {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+}
+
+
+
+.image-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.image-overlay img {
+    width: 100px;
+}
+.image-overlay h2 {
+    font-size: 3.4rem;
+    color: #fff;
+    font-family: "norse";
+    padding: 4px;
+}
+
+
+
+
+
+
+.form-section {
+    padding: 24px;
+}
+
+.form-section > p {
+    padding: 4px;
+    font-size: 1.3rem;
+    text-align: left;
+    color: #000;
+}
+
+
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-around ;
+
+    list-style: none;
+    padding: 4px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+}
+
+.form-row label {
+    width: 140px;
+    font-size: .8rem;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    
+}
+
+.form-row input {
+    width: 150px;
+    height: 22px;
+    padding: 4px;
+    border: 1px solid #c8cacf;
+    outline: none;
+}
+.form-row input:focus {
+    border: 1px solid rgb(17, 17, 136);
+    box-shadow: 0 1px 5px 0 black;
+}
+
+.form-row input:focus:invalid {
+    border: 1px solid red;
+}
+
+
+button[type="submit"]{
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #596D48;
+    color: #fff;
+    margin-left: 8px;
+    border-radius: 4px;
+}
+
+p > a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.password-error {
+    display: none;
+    color: red;
+    margin-top: 4px;
+}
+
+.show-error {
+    display: inline;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .hero {
+        width: 350px;
+        flex: 1 0 auto;
+    }
+
+
+
+    .form-row input {
+        width: 200px;
+    }
+} 
